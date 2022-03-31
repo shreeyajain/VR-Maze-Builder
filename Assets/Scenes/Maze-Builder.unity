@@ -3694,6 +3694,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mazePrefab: {fileID: 883788786337002225, guid: 3192e219b51ae45a690add02ddf2a8e3, type: 3}
   startPrefab: {fileID: 7049760561854632086, guid: 423d19a3bf8f34d4392feafb75dc86c1, type: 3}
+  endPrefab: {fileID: 7932838694254473892, guid: 09ab6637896e643f6b8a73a2ca33bcf6, type: 3}
   fencePrefab: {fileID: 6848683615256044919, guid: 3b4e67ec87b93214b87349417e4fd4db, type: 3}
   cameraTransform: {fileID: 963194228}
   inactiveImage: {fileID: 21300000, guid: 72c72df40bd317b44ab2c02d03f268c7, type: 3}
@@ -3702,6 +3703,9 @@ MonoBehaviour:
   greenMat: {fileID: 2100000, guid: 89bb13f53824b473db9ab32d6d8bb48d, type: 2}
   mazeMat: {fileID: 2100000, guid: c2d64154e90404592944df936c057446, type: 2}
   startMat: {fileID: 2100000, guid: b91988fe0368e42bab66c89d1eeb244c, type: 2}
+  endMat1: {fileID: 2100000, guid: 5bcf369b4a58e4950a5f83c92acf8870, type: 2}
+  endMat2: {fileID: 2100000, guid: 9c0f93c8856754d12b9b23ce6db5b73a, type: 2}
+  endMat3: {fileID: 2100000, guid: fd3f4d62d81784be5a1ca8c96b8c68b2, type: 2}
   fenceMat: {fileID: 2100000, guid: c7570635f41c244d585bf5863da2d24d, type: 2}
   xrNode: 4
 --- !u!1 &2096562212
