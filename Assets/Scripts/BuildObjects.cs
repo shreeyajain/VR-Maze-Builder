@@ -78,7 +78,6 @@ public class BuildObjects : MonoBehaviour
         // If user is currently building a maze block
         if (mazeButton)
         {
-            /*
             // Primary button press moves the object down
             device.TryGetFeatureValue(CommonUsages.primaryButton, out primaryButtonAction);
             if (primaryButtonAction != pButtonPressInPrevFrame)
@@ -102,7 +101,6 @@ public class BuildObjects : MonoBehaviour
                 }
                 sButtonPressInPrevFrame = secondaryButtonAction;
             }
-            */
 
             // Store the vector3 position of a point in front of the camera
             target = new Vector3((float)Math.Floor(cameraTransform.position.x) + 0.5f, targetY,
