@@ -16,7 +16,8 @@ public class BuildObjects : MonoBehaviour
 
     public Material redMat;
     public Material greenMat;
-    public Material mazeMat;
+    
+    private Material mazeMat;
     // private Material[] fenceMat;
 
     private bool mazeButton;
@@ -198,6 +199,7 @@ public class BuildObjects : MonoBehaviour
         target = new Vector3((float)Math.Floor(cameraTransform.position.x) + 0.5f, targetY,
                                 (float)Math.Ceiling(cameraTransform.position.z) + 3.5f);
         build = (GameObject) Instantiate(mazePrefab, target, Quaternion.identity);
+        mazeMat = build.GetComponent<Renderer>().material;
         for (int j = 0; j < gameObject.transform.childCount; j++)
         {
             Button button = gameObject.transform.GetChild(j).GetComponent<Button>();
