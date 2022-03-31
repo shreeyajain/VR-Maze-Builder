@@ -115,11 +115,11 @@ public class BuildObjects : MonoBehaviour
             build.transform.position = target; 
 
             // If the object is being incorrectly placed 
-            // Conditions include being outside the 10x3x10 workspace boundary
-            // (x in [-4.5, 4.5], y in [0.5, 2.5], z in [-4.5, 4.5])
+            // Conditions include being outside the 12x3x12 workspace boundary
+            // (x in [-5.5, 5.5], y in [0.5, 2.5], z in [-5.5, 5.5])
             // Or if it's currently colliding with any other object
-            if (target.x < -4.5 || target.x > 4.5 || target.y < 0.5 || target.y > 2.5 ||
-                    target.z < -4.5 || target.z > 4.5 || build.GetComponent<CheckCollisionMaze>().anyCollision)
+            if (target.x < -5.5 || target.x > 5.5 || target.y < 0.5 || target.y > 2.5 ||
+                    target.z < -5.5 || target.z > 5.5 || build.GetComponent<CheckCollisionMaze>().anyCollision)
             {
                 build.GetComponent<Renderer>().material = redMat;
                 canBuild = false;
@@ -156,10 +156,10 @@ public class BuildObjects : MonoBehaviour
             build.transform.position = target; 
 
             // If the object is being incorrectly placed 
-            // Conditions include being outside the 10x3x10 workspace boundary
-            // (x in [-4, 4], y in {0.0}, z in [-4.5, 4.5])
+            // Conditions include being outside the 12x3x12 workspace boundary
+            // (x in [-5, 5], y in {0.0}, z in [-5.5, 5.5])
             // Or if it's currently colliding with any other object
-            if (target.x < -4 || target.x > 4 || target.z < -4.5 || target.z > 4.5 || 
+            if (target.x < -5 || target.x > 5 || target.z < -5.5 || target.z > 5.5 || 
                     build.GetComponent<CheckCollisionStart>().anyCollision)
             {
                 for (int j = 0; j < build.transform.childCount; j++)
@@ -209,10 +209,10 @@ public class BuildObjects : MonoBehaviour
             build.transform.position = target; 
 
             // If the object is being incorrectly placed 
-            // Conditions include being outside the 10x3x10 workspace boundary
-            // (x in [2.19, 10.19], y in {0.0}, z in [-2.06, 6.06])
+            // Conditions include being outside the 12x3x12 workspace boundary
+            // (x in [1.19, 11.19], y in {0.0}, z in [-3.06, 7.06])
             // Or if it's currently colliding with any other object
-            if (target.x < 2.19 || target.x > 10.20 || target.z < -2.06 || target.z > 6.06 || 
+            if (target.x < 1.19 || target.x > 11.20 || target.z < -3.06 || target.z > 7.06 || 
                     build.GetComponent<CheckCollisionEnd>().anyCollision)
             {
                 for (int j = 0; j < build.transform.childCount; j++)
@@ -268,10 +268,10 @@ public class BuildObjects : MonoBehaviour
             build.transform.position = target; 
 
             // If the object is being incorrectly placed 
-            // Conditions include being outside the 10x3x10 workspace boundary
-            // (x in [-4, 4], y in {0.5}, z in [-4.5, 4.5])
+            // Conditions include being outside the 12x3x12 workspace boundary
+            // (x in [-5, 5], y in {0.5}, z in [-5.5, 5.5])
             // Or if it's currently colliding with any other object
-            if (target.x < -4 || target.x > 4 || target.z < -4.5 || target.z > 4.5 || 
+            if (target.x < -5 || target.x > 5 || target.z < -5.5 || target.z > 5.5 || 
                     build.GetComponent<CheckCollisionFence>().anyCollision)
             {
                 for (int j = 0; j < build.transform.childCount; j++)
