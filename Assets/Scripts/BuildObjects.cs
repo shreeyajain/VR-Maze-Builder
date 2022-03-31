@@ -9,6 +9,7 @@ using UnityEngine.XR;
 public class BuildObjects : MonoBehaviour
 {
     public UnityEngine.Object mazePrefab;
+    public UnityEngine.Object startPrefab;
     public UnityEngine.Object fencePrefab;
     public Transform cameraTransform;
     public Sprite inactiveImage;
@@ -17,6 +18,7 @@ public class BuildObjects : MonoBehaviour
     public Material redMat;
     public Material greenMat;
     public Material mazeMat;
+    public Material startMat;
     public Material fenceMat;
 
     private bool mazeButton;
@@ -139,8 +141,62 @@ public class BuildObjects : MonoBehaviour
                 }
             }
         }
+
+        // If user is currently building a start post 
+        else if (startButton)
+        {
+            // Store the vector3 position of a point in front of the camera
+            target = new Vector3((float)Math.Floor(cameraTransform.position.x), 0.0f,
+                                    (float)Math.Ceiling(cameraTransform.position.z) + 3.5f);
+            // Build the new object in front of the camera position
+            build.transform.position = target; 
+
+            // If the object is being incorrectly placed 
+            // Conditions include being outside the 10x3x10 workspace boundary
+            // (x in [-4, 4], y in {0.0}, z in [-4.5, 4.5])
+            // Or if it's currently colliding with any other object
+            if (target.x < -4 || target.x > 4 || target.z < -4.5 || target.z > 4.5 || 
+                    build.GetComponent<CheckCollisionStart>().anyCollision)
+            {
+                for (int j = 0; j < build.transform.childCount; j++)
+                {
+                    build.transform.GetChild(j).GetComponent<Renderer>().material = redMat;
+                }
+                canBuild = false;
+            }
+            else
+            {
+                for (int j = 0; j < build.transform.childCount; j++)
+                {
+                    build.transform.GetChild(j).GetComponent<Renderer>().material = greenMat;
+                }
+                canBuild = true;
+            }
+
+            if (device.TryGetFeatureValue(CommonUsages.triggerButton, out triggerButtonAction) &&
+                    triggerButtonAction && canBuild)
+            {
+                startButton = false;
+                for (int j = 0; j < build.transform.childCount; j++)
+                {
+                    build.transform.GetChild(j).GetComponent<Renderer>().material = startMat;
+                }
+                for (int j = 0; j < gameObject.transform.childCount; j++)
+                {
+                    if (j != 1)
+                    {
+                        Button button = gameObject.transform.GetChild(j).GetComponent<Button>();
+                        // Toggle interactable state of the button on and off
+                        button.interactable = !button.interactable;
+                        // Change the image of the button to BigPink
+                        button.GetComponent<Image>().sprite = activeImage;
+                    }
+                }
+            }
+        }
+
         // If user is currently building a fence 
-        if (fenceButton)
+        else if (fenceButton)
         {
             // Store the vector3 position of a point in front of the camera
             target = new Vector3((float)Math.Floor(cameraTransform.position.x), 0.75f,
@@ -210,6 +266,9 @@ public class BuildObjects : MonoBehaviour
     public void OnStartButtonPress()
     {
         startButton = true;
+        target = new Vector3((float)Math.Floor(cameraTransform.position.x), 0.0f,
+                                (float)Math.Ceiling(cameraTransform.position.z) + 3.5f);
+        build = (GameObject) Instantiate(startPrefab, target, Quaternion.identity);
         for (int j = 0; j < gameObject.transform.childCount; j++)
         {
             Button button = gameObject.transform.GetChild(j).GetComponent<Button>();
