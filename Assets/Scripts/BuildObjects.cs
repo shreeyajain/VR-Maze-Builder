@@ -16,9 +16,8 @@ public class BuildObjects : MonoBehaviour
 
     public Material redMat;
     public Material greenMat;
-    
-    private Material mazeMat;
-    // private Material[] fenceMat;
+    public Material mazeMat;
+    public Material fenceMat;
 
     private bool mazeButton;
     private bool startButton;
@@ -140,7 +139,6 @@ public class BuildObjects : MonoBehaviour
                 }
             }
         }
-        /*
         // If user is currently building a fence 
         if (fenceButton)
         {
@@ -178,7 +176,7 @@ public class BuildObjects : MonoBehaviour
                 fenceButton = false;
                 for (int j = 0; j < build.transform.childCount; j++)
                 {
-                    build.transform.GetChild(j).GetComponent<Renderer>().material = fenceMat[j];
+                    build.transform.GetChild(j).GetComponent<Renderer>().material = fenceMat;
                 }
                 for (int j = 0; j < gameObject.transform.childCount; j++)
                 {
@@ -189,7 +187,7 @@ public class BuildObjects : MonoBehaviour
                     button.GetComponent<Image>().sprite = activeImage;
                 }
             }
-        }*/
+        }
     }
 
     public void OnMazeButtonPress()
@@ -199,7 +197,6 @@ public class BuildObjects : MonoBehaviour
         target = new Vector3((float)Math.Floor(cameraTransform.position.x) + 0.5f, targetY,
                                 (float)Math.Ceiling(cameraTransform.position.z) + 3.5f);
         build = (GameObject) Instantiate(mazePrefab, target, Quaternion.identity);
-        mazeMat = build.GetComponent<Renderer>().material;
         for (int j = 0; j < gameObject.transform.childCount; j++)
         {
             Button button = gameObject.transform.GetChild(j).GetComponent<Button>();
@@ -239,13 +236,9 @@ public class BuildObjects : MonoBehaviour
     public void OnFenceButtonPress()
     {
         fenceButton = true;
-        // target = new Vector3((float)Math.Floor(cameraTransform.position.x), 0.75f,
-        //                         (float)Math.Ceiling(cameraTransform.position.z) + 3.5f);
-        // build = (GameObject) Instantiate(fencePrefab, target, Quaternion.identity);
-        // for (int j = 0; j < build.transform.childCount; j++)
-        // {
-        //     fenceMat[j] = build.transform.GetChild(j).GetComponent<Renderer>().material;
-        // }
+        target = new Vector3((float)Math.Floor(cameraTransform.position.x), 0.75f,
+                                (float)Math.Ceiling(cameraTransform.position.z) + 3.5f);
+        build = (GameObject) Instantiate(fencePrefab, target, Quaternion.identity);
         for (int j = 0; j < gameObject.transform.childCount; j++)
         {
             Button button = gameObject.transform.GetChild(j).GetComponent<Button>();

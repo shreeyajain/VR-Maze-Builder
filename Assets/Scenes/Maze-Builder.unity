@@ -3700,6 +3700,7 @@ MonoBehaviour:
   redMat: {fileID: 2100000, guid: 2ab11b741dd454315b70f6eb6853fe3b, type: 2}
   greenMat: {fileID: 2100000, guid: 89bb13f53824b473db9ab32d6d8bb48d, type: 2}
   mazeMat: {fileID: 2100000, guid: c2d64154e90404592944df936c057446, type: 2}
+  fenceMat: {fileID: 2100000, guid: c7570635f41c244d585bf5863da2d24d, type: 2}
   xrNode: 4
 --- !u!1 &2096562212
 GameObject:
