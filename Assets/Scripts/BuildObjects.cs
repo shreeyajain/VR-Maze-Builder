@@ -352,8 +352,8 @@ public class BuildObjects : MonoBehaviour
         endButton = true;
         target = new Vector3((float)Math.Floor(cameraTransform.position.x) + 6.19f, 0.0f,
                                     (float)Math.Ceiling(cameraTransform.position.z) + 3.5f + 1.56f);
-        build.GetComponent<Collider>().isTrigger = true;
         build = (GameObject) Instantiate(endPrefab, target, Quaternion.identity);
+        build.GetComponent<Collider>().isTrigger = true;
         for (int j = 0; j < gameObject.transform.childCount; j++)
         {
             Button button = gameObject.transform.GetChild(j).GetComponent<Button>();
