@@ -134,6 +134,7 @@ public class BuildObjects : MonoBehaviour
                     triggerButtonAction && canBuild)
             {
                 mazeButton = false;
+                build.GetComponent<Collider>().isTrigger = false;
                 build.GetComponent<Renderer>().material = mazeMat;
                 for (int j = 0; j < gameObject.transform.childCount; j++)
                 {
@@ -181,6 +182,7 @@ public class BuildObjects : MonoBehaviour
                     triggerButtonAction && canBuild)
             {
                 startButton = false;
+                build.GetComponent<Collider>().isTrigger = false;
                 for (int j = 0; j < build.transform.childCount; j++)
                 {
                     build.transform.GetChild(j).GetComponent<Renderer>().material = startMat;
@@ -234,7 +236,7 @@ public class BuildObjects : MonoBehaviour
                     triggerButtonAction && canBuild)
             {
                 endButton = false;
-
+                build.GetComponent<Collider>().isTrigger = false;
                 build.transform.GetChild(0).GetComponent<Renderer>().material = endMat1;
                 for (int j = 1; j < 3; j++)
                 {
@@ -293,6 +295,7 @@ public class BuildObjects : MonoBehaviour
                     triggerButtonAction && canBuild)
             {
                 fenceButton = false;
+                build.GetComponent<Collider>().isTrigger = false;
                 for (int j = 0; j < build.transform.childCount; j++)
                 {
                     build.transform.GetChild(j).GetComponent<Renderer>().material = fenceMat;
@@ -316,6 +319,7 @@ public class BuildObjects : MonoBehaviour
         target = new Vector3((float)Math.Floor(cameraTransform.position.x) + 0.5f, targetY,
                                 (float)Math.Ceiling(cameraTransform.position.z) + 3.5f);
         build = (GameObject) Instantiate(mazePrefab, target, Quaternion.identity);
+        build.GetComponent<Collider>().isTrigger = true;
         for (int j = 0; j < gameObject.transform.childCount; j++)
         {
             Button button = gameObject.transform.GetChild(j).GetComponent<Button>();
@@ -332,6 +336,7 @@ public class BuildObjects : MonoBehaviour
         target = new Vector3((float)Math.Floor(cameraTransform.position.x), 0.0f,
                                 (float)Math.Ceiling(cameraTransform.position.z) + 3.5f);
         build = (GameObject) Instantiate(startPrefab, target, Quaternion.identity);
+        build.GetComponent<Collider>().isTrigger = true;
         for (int j = 0; j < gameObject.transform.childCount; j++)
         {
             Button button = gameObject.transform.GetChild(j).GetComponent<Button>();
@@ -347,6 +352,7 @@ public class BuildObjects : MonoBehaviour
         endButton = true;
         target = new Vector3((float)Math.Floor(cameraTransform.position.x) + 6.19f, 0.0f,
                                     (float)Math.Ceiling(cameraTransform.position.z) + 3.5f + 1.56f);
+        build.GetComponent<Collider>().isTrigger = true;
         build = (GameObject) Instantiate(endPrefab, target, Quaternion.identity);
         for (int j = 0; j < gameObject.transform.childCount; j++)
         {
@@ -364,6 +370,7 @@ public class BuildObjects : MonoBehaviour
         target = new Vector3((float)Math.Floor(cameraTransform.position.x), 0.75f,
                                 (float)Math.Ceiling(cameraTransform.position.z) + 3.5f);
         build = (GameObject) Instantiate(fencePrefab, target, Quaternion.identity);
+        build.GetComponent<Collider>().isTrigger = true;
         for (int j = 0; j < gameObject.transform.childCount; j++)
         {
             Button button = gameObject.transform.GetChild(j).GetComponent<Button>();
