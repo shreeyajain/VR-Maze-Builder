@@ -25,9 +25,11 @@ public class SelectMaze : MonoBehaviour
     private List<InputDevice> devices = new List<InputDevice>();
     private InputDevice device;
 
+    private bool pButtonPressInPrevFrame;
+    private bool sButtonPressInPrevFrame;
+
     private Vector3 target;
     private Vector3 prevPos;
-    private float targetY;
     private bool canMove;
 
     void GetDevice()
@@ -50,6 +52,8 @@ public class SelectMaze : MonoBehaviour
         wasBuildActive = false;
         wasBuildingActive = false;
         canMove = true;
+        pButtonPressInPrevFrame = false;
+        sButtonPressInPrevFrame = false;
 
         canvas = GameObject.Find("Canvas");
         build = canvas.transform.GetChild(0).gameObject;
@@ -66,10 +70,15 @@ public class SelectMaze : MonoBehaviour
             GetDevice();
         } 
 
+        bool primaryButtonAction = false; // check if primary button was pressed
+        bool secondaryButtonAction = false; // check if secondary button was pressed
+
         Vector2 move = Vector2.zero;
         if (select)
         {
+            gameObject.GetComponent<Renderer>().material = greenMat;
             target = transform.position;
+
             // Joystick movement to move the maze in x and z axes
             if (device.TryGetFeatureValue(CommonUsages.primary2DAxis, out move) && move != Vector2.zero)
             {
@@ -107,6 +116,35 @@ public class SelectMaze : MonoBehaviour
                 canMove = true;
             }
 
+            // Primary button press moves the object down
+            device.TryGetFeatureValue(CommonUsages.primaryButton, out primaryButtonAction);
+            if (primaryButtonAction != pButtonPressInPrevFrame)
+            {
+                if (!primaryButtonAction)
+                {
+                    if (transform.position.y > 0.5f)
+                    {
+                        prevPos = transform.position;
+                        target = transform.position - new Vector3(0, 1, 0);
+                    }
+                }
+                pButtonPressInPrevFrame = primaryButtonAction;
+            }
+            // Secondary button press moves the object up
+            device.TryGetFeatureValue(CommonUsages.secondaryButton, out secondaryButtonAction);
+            if (secondaryButtonAction != sButtonPressInPrevFrame)
+            {
+                if (!secondaryButtonAction)
+                {
+                    if (transform.position.y < 2.5f)
+                    {
+                        prevPos = transform.position;
+                        target = transform.position + new Vector3(0, 1, 0);
+                    }
+                }
+                sButtonPressInPrevFrame = secondaryButtonAction;
+            }
+
             // If the object is being incorrectly placed 
             // Conditions include being inside the 12x3x12 workspace boundary
             // (x in [-5.5, 5.5], y in [0.5, 2.5], z in [-5.5, 5.5])
@@ -127,7 +165,6 @@ public class SelectMaze : MonoBehaviour
     {
         select = true;
         gameObject.GetComponent<Renderer>().material = greenMat;
-        targetY = gameObject.transform.position.y;
         gameObject.GetComponent<Collider>().isTrigger = true;
 
         selecting.SetActive(true);
