@@ -30,6 +30,7 @@ public class SelectFence : MonoBehaviour
     private Vector3 prevPos;
     private Vector3 targetRot;
     private Vector3 prevRot;
+    private Vector3 posToAdd;
     private bool canMove;
     private bool rotate;
 
@@ -118,13 +119,6 @@ public class SelectFence : MonoBehaviour
                 canMove = true;
             }
 
-            if (rotate)
-            {
-                // Only rotate it once
-                rotate = false;
-                transform.Rotate(targetRot);
-            }
-
             // If the object is being incorrectly placed 
             // Conditions include being inside the 12x3x12 workspace boundary
             // (x in [-5, 5], y in {0.5}}, z in [-5.5, 5.5])
@@ -133,6 +127,15 @@ public class SelectFence : MonoBehaviour
             {
                 transform.position = target;
             }
+
+            if (rotate)
+            {
+                // Only rotate it once
+                rotate = false;
+                transform.Rotate(targetRot);
+                transform.position += posToAdd;
+            }
+
             if (gameObject.GetComponent<CheckCollisionFence>().anyCollision)
             {
                 transform.position = prevPos;
@@ -162,10 +165,18 @@ public class SelectFence : MonoBehaviour
             building.SetActive(false);
         }
 
+        Button Xplus = selecting.transform.GetChild(0).GetComponent<Button>();
+		Xplus.onClick.AddListener(() => RotatePlusX());
+        Button Xneg = selecting.transform.GetChild(1).GetComponent<Button>();
+		Xneg.onClick.AddListener(() => RotateNegX());
         Button Yplus = selecting.transform.GetChild(2).GetComponent<Button>();
 		Yplus.onClick.AddListener(() => RotatePlusY());
         Button Yneg = selecting.transform.GetChild(3).GetComponent<Button>();
 		Yneg.onClick.AddListener(() => RotateNegY());
+        Button Zplus = selecting.transform.GetChild(4).GetComponent<Button>();
+		Zplus.onClick.AddListener(() => RotatePlusZ());
+        Button Zneg = selecting.transform.GetChild(5).GetComponent<Button>();
+		Zneg.onClick.AddListener(() => RotateNegZ());
     }
 
     public void Deselect()
@@ -177,10 +188,18 @@ public class SelectFence : MonoBehaviour
         }
         gameObject.GetComponent<Collider>().isTrigger = false;
 
+        Button Xplus = selecting.transform.GetChild(0).GetComponent<Button>();
+		Xplus.onClick.RemoveListener(() => RotatePlusX());
+        Button Xneg = selecting.transform.GetChild(1).GetComponent<Button>();
+		Xneg.onClick.RemoveListener(() => RotateNegX());
         Button Yplus = selecting.transform.GetChild(2).GetComponent<Button>();
 		Yplus.onClick.RemoveListener(() => RotatePlusY());
         Button Yneg = selecting.transform.GetChild(3).GetComponent<Button>();
 		Yneg.onClick.RemoveListener(() => RotateNegY());
+        Button Zplus = selecting.transform.GetChild(4).GetComponent<Button>();
+		Zplus.onClick.RemoveListener(() => RotatePlusZ());
+        Button Zneg = selecting.transform.GetChild(5).GetComponent<Button>();
+		Zneg.onClick.RemoveListener(() => RotateNegZ());
         
         selecting.SetActive(false);
         if (wasBuildActive)
@@ -195,12 +214,31 @@ public class SelectFence : MonoBehaviour
         }
     }
 
+    public void RotatePlusX()
+    {
+        rotate = true;
+        prevPos = transform.position;
+        prevRot = transform.eulerAngles;
+        targetRot = new Vector3(90, 0, 0);
+        posToAdd = new Vector3(0, 0, 0);
+    }
+
+    public void RotateNegX()
+    {
+        rotate = true;
+        prevPos = transform.position;
+        prevRot = transform.eulerAngles;
+        targetRot = new Vector3(-90, 0, 0); 
+        posToAdd = new Vector3(0, 0, 0);
+    }
+
     public void RotatePlusY()
     {
         rotate = true;
         prevPos = transform.position;
         prevRot = transform.eulerAngles;
         targetRot = new Vector3(0, 90, 0);
+        posToAdd = new Vector3(0.5f, 0.0f, 0.5f);
     }
 
     public void RotateNegY()
@@ -209,5 +247,34 @@ public class SelectFence : MonoBehaviour
         prevPos = transform.position;
         prevRot = transform.eulerAngles;
         targetRot = new Vector3(0, -90, 0); 
+        posToAdd = new Vector3(-0.5f, 0.0f, 0.5f);
+    }
+
+    public void RotatePlusZ()
+    {
+        rotate = true;
+        prevPos = transform.position;
+        prevRot = transform.eulerAngles;
+        targetRot = new Vector3(0, 0, 90);
+        if (transform.position.y == 0.75f)
+            posToAdd = new Vector3(0.0f, 0.25f, 0.0f);
+        else if (transform.position.y == 1.0f)
+            posToAdd = new Vector3(0.0f, -0.25f, 0.0f);
+        else
+            posToAdd = new Vector3(0, 0, 0);
+    }
+
+    public void RotateNegZ()
+    {
+        rotate = true;
+        prevPos = transform.position;
+        prevRot = transform.eulerAngles;
+        targetRot = new Vector3(0, 0, -90); 
+        if (transform.position.y == 0.75f)
+            posToAdd = new Vector3(0.0f, 0.25f, 0.0f);
+        else if (transform.position.y == 1.0f)
+            posToAdd = new Vector3(0.0f, -0.25f, 0.0f);
+        else
+            posToAdd = new Vector3(0, 0, 0);
     }
 }
