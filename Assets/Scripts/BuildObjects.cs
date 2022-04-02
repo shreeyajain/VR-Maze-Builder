@@ -151,14 +151,14 @@ public class BuildObjects : MonoBehaviour
         else if (startButton)
         {
             // Store the vector3 position of a point in front of the camera
-            target = new Vector3((float)Math.Floor(cameraTransform.position.x), 0.0f,
+            target = new Vector3((float)Math.Floor(cameraTransform.position.x), 1.0f,
                                     (float)Math.Ceiling(cameraTransform.position.z) + 3.5f);
             // Build the new object in front of the camera position
             build.transform.position = target; 
 
             // If the object is being incorrectly placed 
             // Conditions include being outside the 12x3x12 workspace boundary
-            // (x in [-5, 5], y in {0.0}, z in [-5.5, 5.5])
+            // (x in [-5, 5], y in {1.0}, z in [-5.5, 5.5])
             // Or if it's currently colliding with any other object
             if (target.x < -5 || target.x > 5 || target.z < -5.5 || target.z > 5.5 || 
                     build.GetComponent<CheckCollisionStart>().anyCollision)
@@ -333,7 +333,7 @@ public class BuildObjects : MonoBehaviour
     public void OnStartButtonPress()
     {
         startButton = true;
-        target = new Vector3((float)Math.Floor(cameraTransform.position.x), 0.0f,
+        target = new Vector3((float)Math.Floor(cameraTransform.position.x), 1.0f,
                                 (float)Math.Ceiling(cameraTransform.position.z) + 3.5f);
         build = (GameObject) Instantiate(startPrefab, target, Quaternion.identity);
         build.GetComponent<Collider>().isTrigger = true;
