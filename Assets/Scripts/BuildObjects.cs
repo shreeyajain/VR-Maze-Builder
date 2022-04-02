@@ -205,16 +205,16 @@ public class BuildObjects : MonoBehaviour
         else if (endButton)
         {
             // Store the vector3 position of a point in front of the camera
-            target = new Vector3((float)Math.Floor(cameraTransform.position.x) + 6.19f, 0.0f,
-                                    (float)Math.Ceiling(cameraTransform.position.z) + 3.5f + 1.56f);
+            target = new Vector3((float)Math.Floor(cameraTransform.position.x), 1.0f,
+                                    (float)Math.Ceiling(cameraTransform.position.z) + 4.5f);
             // Build the new object in front of the camera position
             build.transform.position = target; 
 
             // If the object is being incorrectly placed 
             // Conditions include being outside the 12x3x12 workspace boundary
-            // (x in [1.19, 11.19], y in {0.0}, z in [-3.06, 7.06])
+            // (x in [-5, 5], y in {1.0}, z in [-5, 5])
             // Or if it's currently colliding with any other object
-            if (target.x < 1.19 || target.x > 11.20 || target.z < -3.06 || target.z > 7.06 || 
+            if (target.x < -5 || target.x > 5 || target.z < -5 || target.z > 5 || 
                     build.GetComponent<CheckCollisionEnd>().anyCollision)
             {
                 for (int j = 0; j < build.transform.childCount; j++)
@@ -350,8 +350,8 @@ public class BuildObjects : MonoBehaviour
     public void OnEndButtonPress()
     {
         endButton = true;
-        target = new Vector3((float)Math.Floor(cameraTransform.position.x) + 6.19f, 0.0f,
-                                    (float)Math.Ceiling(cameraTransform.position.z) + 3.5f + 1.56f);
+        target = new Vector3((float)Math.Floor(cameraTransform.position.x), 1.0f,
+                                    (float)Math.Ceiling(cameraTransform.position.z) + 4.5f);
         build = (GameObject) Instantiate(endPrefab, target, Quaternion.identity);
         build.GetComponent<Collider>().isTrigger = true;
         for (int j = 0; j < gameObject.transform.childCount; j++)
