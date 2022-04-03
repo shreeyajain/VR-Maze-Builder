@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 7558004080612470430}
   m_Layer: 0
   m_Name: MazeBlock
-  m_TagString: Untagged
+  m_TagString: maze
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -283,3 +283,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   greenMat: {fileID: 2100000, guid: 89bb13f53824b473db9ab32d6d8bb48d, type: 2}
   mazeMat: {fileID: 2100000, guid: c2d64154e90404592944df936c057446, type: 2}
+  xrNode: 5

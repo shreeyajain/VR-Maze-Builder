@@ -7,6 +7,10 @@ TagManager:
   - Build
   - Building
   - Selecting
+  - maze
+  - fence
+  - start
+  - end
   layers:
   - Default
   - TransparentFX

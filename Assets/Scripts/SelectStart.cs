@@ -17,6 +17,7 @@ public class SelectStart : MonoBehaviour
     private GameObject selecting;
     private GameObject build;
     private GameObject building;
+    private GameObject save;
 
     private bool select;
     private bool wasBuildActive;
@@ -60,6 +61,7 @@ public class SelectStart : MonoBehaviour
         build = canvas.transform.GetChild(0).gameObject;
         building = canvas.transform.GetChild(1).gameObject;
         selecting = canvas.transform.GetChild(2).gameObject;
+        save = canvas.transform.GetChild(3).gameObject;
     }
     
     // Update is called once per frame
@@ -158,6 +160,7 @@ public class SelectStart : MonoBehaviour
         {
             wasBuildActive = true;
             build.SetActive(false);
+            save.SetActive(false);
         }
         else if (building.activeSelf)
         {
@@ -210,6 +213,7 @@ public class SelectStart : MonoBehaviour
         {
             wasBuildActive = false;
             build.SetActive(true);
+            save.SetActive(true);
         }
         else if (wasBuildingActive)
         {

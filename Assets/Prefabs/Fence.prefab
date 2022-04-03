@@ -421,7 +421,7 @@ GameObject:
   - component: {fileID: -2292642014931487480}
   m_Layer: 0
   m_Name: Fence
-  m_TagString: Untagged
+  m_TagString: fence
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -643,6 +643,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   greenMat: {fileID: 2100000, guid: 89bb13f53824b473db9ab32d6d8bb48d, type: 2}
   fenceMat: {fileID: 2100000, guid: c7570635f41c244d585bf5863da2d24d, type: 2}
+  xrNode: 5
 --- !u!1 &8478654647971974704
 GameObject:
   m_ObjectHideFlags: 0
