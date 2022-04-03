@@ -207,6 +207,8 @@ public class SelectMaze : MonoBehaviour
 		Zplus.onClick.AddListener(() => RotatePlusZ());
         Button Zneg = selecting.transform.GetChild(5).GetComponent<Button>();
 		Zneg.onClick.AddListener(() => RotateNegZ());
+        Button Del = selecting.transform.GetChild(6).GetComponent<Button>();
+		Del.onClick.AddListener(() => DeleteObj());
     }
 
     public void Deselect()
@@ -227,6 +229,8 @@ public class SelectMaze : MonoBehaviour
 		Zplus.onClick.RemoveListener(() => RotatePlusZ());
         Button Zneg = selecting.transform.GetChild(5).GetComponent<Button>();
 		Zneg.onClick.RemoveListener(() => RotateNegZ());
+        Button Del = selecting.transform.GetChild(6).GetComponent<Button>();
+		Del.onClick.RemoveListener(() => DeleteObj());
         
         selecting.SetActive(false);
         if (wasBuildActive)
@@ -287,5 +291,10 @@ public class SelectMaze : MonoBehaviour
         prevPos = transform.position;
         prevRot = transform.eulerAngles;
         targetRot = new Vector3(0, 0, -90); 
+    }
+
+    public void DeleteObj()
+    {
+        Destroy(gameObject);
     }
 }

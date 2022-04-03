@@ -13,6 +13,7 @@ public class SelectEnd : MonoBehaviour
     public Material endMat1;
     public Material endMat2;
     public Material endMat3;
+    public Sprite activeImage;
 
     private GameObject canvas;
     private GameObject selecting;
@@ -178,6 +179,8 @@ public class SelectEnd : MonoBehaviour
 		Zplus.onClick.AddListener(() => RotatePlusZ());
         Button Zneg = selecting.transform.GetChild(5).GetComponent<Button>();
 		Zneg.onClick.AddListener(() => RotateNegZ());
+        Button Del = selecting.transform.GetChild(6).GetComponent<Button>();
+		Del.onClick.AddListener(() => DeleteObj());
     }
 
     public void Deselect()
@@ -206,6 +209,8 @@ public class SelectEnd : MonoBehaviour
 		Zplus.onClick.RemoveListener(() => RotatePlusZ());
         Button Zneg = selecting.transform.GetChild(5).GetComponent<Button>();
 		Zneg.onClick.RemoveListener(() => RotateNegZ());
+        Button Del = selecting.transform.GetChild(6).GetComponent<Button>();
+		Del.onClick.RemoveListener(() => DeleteObj());
         
         selecting.SetActive(false);
         if (wasBuildActive)
@@ -266,5 +271,15 @@ public class SelectEnd : MonoBehaviour
         prevPos = transform.position;
         prevRot = transform.eulerAngles;
         targetRot = new Vector3(0, 0, -90); 
+    }
+
+    public void DeleteObj()
+    {
+        Destroy(gameObject);
+        Button button = building.transform.GetChild(2).GetComponent<Button>();
+        // Toggle interactable state of the button on and off
+        button.interactable = !button.interactable;
+        // Change the image of the button to BigPink
+        button.GetComponent<Image>().sprite = activeImage;
     }
 }

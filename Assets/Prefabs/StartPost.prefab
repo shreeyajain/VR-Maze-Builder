@@ -234,6 +234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   greenMat: {fileID: 2100000, guid: 89bb13f53824b473db9ab32d6d8bb48d, type: 2}
   startMat: {fileID: 2100000, guid: b91988fe0368e42bab66c89d1eeb244c, type: 2}
+  activeImage: {fileID: 21300000, guid: 5f4b5e4d7ee5eb14e97739815339826f, type: 3}
   xrNode: 5
 --- !u!1 &7049760561888411698
 GameObject:

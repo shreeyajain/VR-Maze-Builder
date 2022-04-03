@@ -123,7 +123,8 @@ public class SelectFence : MonoBehaviour
             // Conditions include being inside the 12x3x12 workspace boundary
             // (x in [-5, 5], y in {0.5}}, z in [-5.5, 5.5])
             // Or if it's not currently colliding with any other object
-            if (target.x >= -5.5 && target.x <= 5.5 && target.z >= -5.5 && target.z <= 5.5)
+            if (target.x >= -5.5 && target.x <= 5.5 && 
+                    target.z >= -5.5 && target.z <= 5.5)
             {
                 transform.position = target;
             }
@@ -177,6 +178,8 @@ public class SelectFence : MonoBehaviour
 		Zplus.onClick.AddListener(() => RotatePlusZ());
         Button Zneg = selecting.transform.GetChild(5).GetComponent<Button>();
 		Zneg.onClick.AddListener(() => RotateNegZ());
+        Button Del = selecting.transform.GetChild(6).GetComponent<Button>();
+		Del.onClick.AddListener(() => DeleteObj());
     }
 
     public void Deselect()
@@ -200,6 +203,8 @@ public class SelectFence : MonoBehaviour
 		Zplus.onClick.RemoveListener(() => RotatePlusZ());
         Button Zneg = selecting.transform.GetChild(5).GetComponent<Button>();
 		Zneg.onClick.RemoveListener(() => RotateNegZ());
+        Button Del = selecting.transform.GetChild(6).GetComponent<Button>();
+		Del.onClick.RemoveListener(() => DeleteObj());
         
         selecting.SetActive(false);
         if (wasBuildActive)
@@ -276,5 +281,10 @@ public class SelectFence : MonoBehaviour
             posToAdd = new Vector3(0.0f, -0.25f, 0.0f);
         else
             posToAdd = new Vector3(0, 0, 0);
+    }
+
+    public void DeleteObj()
+    {
+        Destroy(gameObject);
     }
 }

@@ -647,6 +647,7 @@ MonoBehaviour:
   endMat1: {fileID: 2100000, guid: 5bcf369b4a58e4950a5f83c92acf8870, type: 2}
   endMat2: {fileID: 2100000, guid: 9c0f93c8856754d12b9b23ce6db5b73a, type: 2}
   endMat3: {fileID: 2100000, guid: fd3f4d62d81784be5a1ca8c96b8c68b2, type: 2}
+  activeImage: {fileID: 21300000, guid: 5f4b5e4d7ee5eb14e97739815339826f, type: 3}
   xrNode: 5
 --- !u!1 &8594439509982915599
 GameObject:
