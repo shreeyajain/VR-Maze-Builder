@@ -12,8 +12,8 @@ TagManager:
   - start
   - end
   - floor
-  - Ignore Collision Fade
   - Canvas
+  - Hand
   layers:
   - Default
   - TransparentFX
