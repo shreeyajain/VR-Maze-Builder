@@ -44,7 +44,7 @@ public class SaveOnFinish : MonoBehaviour
 
         foreach (GameObject fence in fences)
         {
-            ObjectsBuilt obj = new ObjectsBuilt("maze", fence.transform.position, fence.transform.eulerAngles);
+            ObjectsBuilt obj = new ObjectsBuilt("fence", fence.transform.position, fence.transform.eulerAngles);
             data.objects.Add(obj);
         }
 

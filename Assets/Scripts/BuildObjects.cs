@@ -206,7 +206,7 @@ public class BuildObjects : MonoBehaviour
         {
             // Store the vector3 position of a point in front of the camera
             target = new Vector3((float)Math.Floor(cameraTransform.position.x), 1.0f,
-                                    (float)Math.Ceiling(cameraTransform.position.z) + 4.5f);
+                                    (float)Math.Ceiling(cameraTransform.position.z) + 4f);
             // Build the new object in front of the camera position
             build.transform.position = target; 
 
@@ -351,7 +351,7 @@ public class BuildObjects : MonoBehaviour
     {
         endButton = true;
         target = new Vector3((float)Math.Floor(cameraTransform.position.x), 1.0f,
-                                    (float)Math.Ceiling(cameraTransform.position.z) + 4.5f);
+                                    (float)Math.Ceiling(cameraTransform.position.z) + 4f);
         build = (GameObject) Instantiate(endPrefab, target, Quaternion.identity);
         build.GetComponent<Collider>().isTrigger = true;
         for (int j = 0; j < gameObject.transform.childCount; j++)
