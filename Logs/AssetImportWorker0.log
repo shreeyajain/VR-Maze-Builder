@@ -1,0 +1,576 @@
+Unity Editor version:    2020.3.26f1 (7298b473bc1a)
+Branch:                  2020.3/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 12.3 (Build 21E230)
+Darwin version:          21.4.0
+Architecture:            x86_64
+Running under Rosetta:   YES
+Available memory:        8192 MB
+Using pre-set license
+Pro License: NO
+
+COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2020.3.26f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+/Users/shreeya/Columbia/Spring22/3d-ui-ar/unity-projects/Assignment3
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+65109
+Successfully changed project path to: /Users/shreeya/Columbia/Spring22/3d-ui-ar/unity-projects/Assignment3
+/Users/shreeya/Columbia/Spring22/3d-ui-ar/unity-projects/Assignment3
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 322.53 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 11.61 ms.
+Initialize engine version: 2020.3.26f1 (7298b473bc1a)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.3.26f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/shreeya/Columbia/Spring22/3d-ui-ar/unity-projects/Assignment3/Assets
+GfxDevice: creating device client; threaded=0
+2022-04-03 21:34:26.861 Unity[52826:5445487] (null) preferred device: Apple M1 (high power)
+2022-04-03 21:34:26.861 Unity[52826:5445487] Metal devices available: 1
+2022-04-03 21:34:26.861 Unity[52826:5445487] 0: Apple M1 (high power)
+2022-04-03 21:34:26.861 Unity[52826:5445487] Using device Apple M1 (high power)
+Initializing Metal device caps: Apple M1
+Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2020.3.26f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2020.3.26f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = '/Applications/Unity/Hub/Editor/2020.3.26f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56826
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2020.3.26f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.000972 seconds.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 111.99 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.79 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.866 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1866ms)
+		BeginReloadAssembly (175ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (4ms)
+		EndReloadAssembly (1533ms)
+			LoadAssemblies (171ms)
+			RebuildTransferFunctionScriptingTraits (1ms)
+			SetupTypeCache (233ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (63ms)
+			SetupLoadedEditorAssemblies (864ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (14ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (113ms)
+				BeforeProcessingInitializeOnLoad (120ms)
+				ProcessInitializeOnLoadAttributes (466ms)
+				ProcessInitializeOnLoadMethodAttributes (149ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.010398 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/shreeya/Columbia/Spring22/3d-ui-ar/unity-projects/Assignment3/Library/PackageCache/com.unity.collab-proxy@1.15.15/Lib/Editor/PlasticSCM/unityplastic.dll
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 77.07 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.46 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.885 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2887ms)
+		BeginReloadAssembly (285ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (31ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (47ms)
+		EndReloadAssembly (2504ms)
+			LoadAssemblies (223ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (469ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (91ms)
+			SetupLoadedEditorAssemblies (1349ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (10ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (78ms)
+				BeforeProcessingInitializeOnLoad (205ms)
+				ProcessInitializeOnLoadAttributes (1014ms)
+				ProcessInitializeOnLoadMethodAttributes (39ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (3ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (32ms)
+Platform modules already initialized, skipping
+Validating Project structure ... 0.025700 seconds.
+Shader import version has changed; will reimport all shaders...
+Upgrading shader files ...0.078040 seconds.
+Application.AssetDatabase Initial Script Refresh Start
+RefreshInfo: InitialScriptRefreshV2(NoUpdateAssetOptions) scanfilter:  ... 1 filters
+RefreshProfiler: Total: 0.000ms
+Application.AssetDatabase Initial Script Refresh End
+Application.AssetDatabase.Refresh Start
+Application.AssetDatabase.Refresh End
+RefreshInfo: StopAssetImportingV2(ForceSynchronousImport) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
+Launching external process: /Applications/Unity/Hub/Editor/2020.3.26f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.24 seconds
+Initializing Unity extensions:
+2022-04-03 21:34:34.431 Unity[52826:5445487] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x600000ad8620 Font Asset, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
+2022-04-03 21:34:34.438 Unity[52826:5445487] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x600000a05570 Font Asset, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
+Refreshing native plugins compatible for Editor in 1.04 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.26 ms.
+Unloading 3465 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 259.0 MB.
+System memory in use after: 257.9 MB.
+
+Unloading 597 unused Assets to reduce memory usage. Loaded Objects now: 3907.
+Total: 4.833209 ms (FindLiveObjects: 0.324000 ms CreateObjectMapping: 0.103667 ms MarkObjects: 3.372000 ms  DeleteObjects: 1.031208 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007512 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/shreeya/Columbia/Spring22/3d-ui-ar/unity-projects/Assignment3/Library/PackageCache/com.unity.collab-proxy@1.15.15/Lib/Editor/PlasticSCM/unityplastic.dll
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.54 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.50 ms.
+2022-04-03 21:34:39.771 Unity[52826:5445487] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x600000ad2b50 Font Asset, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
+Mono: successfully reloaded assembly
+- Completed reload, in  2.718 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2721ms)
+		BeginReloadAssembly (246ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (33ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (101ms)
+		EndReloadAssembly (2375ms)
+			LoadAssemblies (195ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (442ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (63ms)
+			SetupLoadedEditorAssemblies (1334ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (10ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (257ms)
+				ProcessInitializeOnLoadAttributes (1026ms)
+				ProcessInitializeOnLoadMethodAttributes (36ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (33ms)
+Platform modules already initialized, skipping
+Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(524294) extendedPlatform(0)
+Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.26 ms.
+Unloading 3357 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 245.4 MB.
+System memory in use after: 245.4 MB.
+
+Unloading 58 unused Assets to reduce memory usage. Loaded Objects now: 3911.
+Total: 2.929750 ms (FindLiveObjects: 0.186042 ms CreateObjectMapping: 0.096333 ms MarkObjects: 2.405167 ms  DeleteObjects: 0.241000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Scripts/UndoRedo.cs
+  artifactKey: Guid(5c4045c55e5604c1d9110f7e6e3bb4b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/UndoRedo.cs using Guid(5c4045c55e5604c1d9110f7e6e3bb4b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb70b7f2c3f943aa279fce5d4f06470a') in 0.634745 seconds 
+  Import took 0.646496 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008335 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/shreeya/Columbia/Spring22/3d-ui-ar/unity-projects/Assignment3/Library/PackageCache/com.unity.collab-proxy@1.15.15/Lib/Editor/PlasticSCM/unityplastic.dll
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.12 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 2.22 ms.
+2022-04-03 22:03:49.499 Unity[52826:5445487] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x600000ac74f0 Font Asset, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
+Mono: successfully reloaded assembly
+- Completed reload, in  4.120 seconds
+Domain Reload Profiling:
+	ReloadAssembly (4128ms)
+		BeginReloadAssembly (741ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (157ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (413ms)
+		EndReloadAssembly (3255ms)
+			LoadAssemblies (700ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (628ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (54ms)
+			SetupLoadedEditorAssemblies (1505ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (10ms)
+				SetLoadedEditorAssemblies (2ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (355ms)
+				ProcessInitializeOnLoadAttributes (1092ms)
+				ProcessInitializeOnLoadMethodAttributes (41ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (38ms)
+Platform modules already initialized, skipping
+Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(524294) extendedPlatform(0)
+Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.25 ms.
+Unloading 3357 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 249.9 MB.
+System memory in use after: 249.9 MB.
+
+Unloading 57 unused Assets to reduce memory usage. Loaded Objects now: 3914.
+Total: 4.455042 ms (FindLiveObjects: 0.162375 ms CreateObjectMapping: 0.089250 ms MarkObjects: 3.931583 ms  DeleteObjects: 0.270583 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008660 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/shreeya/Columbia/Spring22/3d-ui-ar/unity-projects/Assignment3/Library/PackageCache/com.unity.collab-proxy@1.15.15/Lib/Editor/PlasticSCM/unityplastic.dll
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.43 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 4.02 ms.
+2022-04-03 22:08:59.152 Unity[52826:5445487] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x600000ac66f0 Font Asset, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
+Mono: successfully reloaded assembly
+- Completed reload, in  4.049 seconds
+Domain Reload Profiling:
+	ReloadAssembly (4052ms)
+		BeginReloadAssembly (500ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (57ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (3ms)
+			CreateAndSetChildDomain (164ms)
+		EndReloadAssembly (3434ms)
+			LoadAssemblies (560ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (540ms)
+			ReleaseScriptCaches (4ms)
+			RebuildScriptCaches (62ms)
+			SetupLoadedEditorAssemblies (1750ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (27ms)
+				SetLoadedEditorAssemblies (7ms)
+				RefreshPlugins (6ms)
+				BeforeProcessingInitializeOnLoad (345ms)
+				ProcessInitializeOnLoadAttributes (1313ms)
+				ProcessInitializeOnLoadMethodAttributes (51ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (39ms)
+Platform modules already initialized, skipping
+Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(524294) extendedPlatform(0)
+Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.27 ms.
+Unloading 3357 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 250.2 MB.
+System memory in use after: 250.1 MB.
+
+Unloading 57 unused Assets to reduce memory usage. Loaded Objects now: 3917.
+Total: 4.659042 ms (FindLiveObjects: 0.166458 ms CreateObjectMapping: 0.074625 ms MarkObjects: 4.148000 ms  DeleteObjects: 0.268750 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 2149.225083 seconds.
+  path: Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_07.png
+  artifactKey: Guid(ffa70af4cf7cbed45abd22050f3d4a0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_07.png using Guid(ffa70af4cf7cbed45abd22050f3d4a0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77069b38603691b3f1d25590cf00d353') in 1.608600 seconds 
+  Import took 1.870799 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002023 seconds.
+  path: Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_11.png
+  artifactKey: Guid(20b2b10a1d8a3a948a3f0ee8aa9b0f66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_11.png using Guid(20b2b10a1d8a3a948a3f0ee8aa9b0f66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2488d6343430a86cf78575eaa0464d20') in 0.017114 seconds 
+  Import took 0.023206 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000255 seconds.
+  path: Assets/Simple Buttons/Buttons Style 2 (Square Purple)/ButtonsStyle2_10.png
+  artifactKey: Guid(57f1dc266472a8742853c49d4d4bbc12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Buttons/Buttons Style 2 (Square Purple)/ButtonsStyle2_10.png using Guid(57f1dc266472a8742853c49d4d4bbc12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fbd6f0e2205f4a6be5cd18f922ff27d') in 0.012819 seconds 
+  Import took 0.017432 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000211 seconds.
+  path: Assets/Simple Buttons/Buttons Style 2 (Square Purple)/ButtonsStyle2_11.png
+  artifactKey: Guid(4aba179bb2623df4c9fffa411421dadc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Buttons/Buttons Style 2 (Square Purple)/ButtonsStyle2_11.png using Guid(4aba179bb2623df4c9fffa411421dadc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f7d190a2d89832491297831794730f2') in 0.028020 seconds 
+  Import took 0.040242 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000274 seconds.
+  path: Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_09.png
+  artifactKey: Guid(82dd942c81c30a24b8e66a1c09431265) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_09.png using Guid(82dd942c81c30a24b8e66a1c09431265) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a7c3c849af5bfbe15f57f89c228c94c') in 0.035281 seconds 
+  Import took 0.045466 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000268 seconds.
+  path: Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_08.png
+  artifactKey: Guid(4aa995e9b0049214a8873c795ee224cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_08.png using Guid(4aa995e9b0049214a8873c795ee224cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd23dcb161a2ee252168311c575efa66') in 0.023760 seconds 
+  Import took 0.056744 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000249 seconds.
+  path: Assets/Simple Buttons/Buttons Style 2 (Square Purple)/ButtonsStyle2_09.png
+  artifactKey: Guid(a1cd6a94c258744438a31e815fecabeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Buttons/Buttons Style 2 (Square Purple)/ButtonsStyle2_09.png using Guid(a1cd6a94c258744438a31e815fecabeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '632c0aecd7d11104a36b92e6979c885b') in 0.028345 seconds 
+  Import took 0.031884 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000266 seconds.
+  path: Assets/Simple Buttons/Buttons Style 2 (Square Purple)/ButtonsStyle2_07.png
+  artifactKey: Guid(97de0f91140f4e745965ba1e83b9bec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Buttons/Buttons Style 2 (Square Purple)/ButtonsStyle2_07.png using Guid(97de0f91140f4e745965ba1e83b9bec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0920328f82df1ce5513a48cfe902d9fa') in 0.032150 seconds 
+  Import took 0.044823 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/Simple Buttons/Buttons Style 2 (Square Purple)/ButtonsStyle2_08.png
+  artifactKey: Guid(e4fc6f401bbbfce4e84f72ecff21be37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Buttons/Buttons Style 2 (Square Purple)/ButtonsStyle2_08.png using Guid(e4fc6f401bbbfce4e84f72ecff21be37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa9cf11a7b1d07ba7f5518f7ee4c8ed7') in 0.010235 seconds 
+  Import took 0.014044 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_10.png
+  artifactKey: Guid(1bad93de348aadf47a364526288f50e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_10.png using Guid(1bad93de348aadf47a364526288f50e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66b4991e12191fc93a5959e6a755b9a1') in 0.009699 seconds 
+  Import took 0.013699 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.790036 seconds.
+  path: Assets/Simple Buttons/Buttons Style 3 (Rounded Pink)/ButtonsStyle3_13.png
+  artifactKey: Guid(203b915a71ebac241ad9689ec414f482) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Buttons/Buttons Style 3 (Rounded Pink)/ButtonsStyle3_13.png using Guid(203b915a71ebac241ad9689ec414f482) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bf083c3d05d5c6a411f2b2377d5d80c') in 0.019340 seconds 
+  Import took 0.028178 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.487729 seconds.
+  path: Assets/Simple Buttons/Buttons Style 3 (Rounded Pink)/ButtonsStyle3_14.png
+  artifactKey: Guid(b0f42b91f3b87e2408b748aefcdf7ca2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Buttons/Buttons Style 3 (Rounded Pink)/ButtonsStyle3_14.png using Guid(b0f42b91f3b87e2408b748aefcdf7ca2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f822291d1ae6eddb2629a2e8dd2ef806') in 0.022669 seconds 
+  Import took 0.031522 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000286 seconds.
+  path: Assets/Simple Buttons/Buttons Style 3 (Rounded Pink)/ButtonsStyle3_15.png
+  artifactKey: Guid(528724731d2a00a41a36da09d74a9e02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Buttons/Buttons Style 3 (Rounded Pink)/ButtonsStyle3_15.png using Guid(528724731d2a00a41a36da09d74a9e02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93409dd5fe4695ba182dec3df2ee13f4') in 0.014783 seconds 
+  Import took 0.020581 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.419458 seconds.
+  path: Assets/Simple Buttons/Buttons Style 3 (Rounded Pink)/ButtonsStyle3_16.png
+  artifactKey: Guid(a512961a75d2fec4aa75c6df4fa35dd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Buttons/Buttons Style 3 (Rounded Pink)/ButtonsStyle3_16.png using Guid(a512961a75d2fec4aa75c6df4fa35dd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30eb0fa1af76460cf84af535370c2713') in 0.019240 seconds 
+  Import took 0.027872 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/Simple Buttons/Buttons Style 3 (Rounded Pink)/ButtonsStyle3_17.png
+  artifactKey: Guid(3efea8c302d7bd540956b3cd7fbc056e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Buttons/Buttons Style 3 (Rounded Pink)/ButtonsStyle3_17.png using Guid(3efea8c302d7bd540956b3cd7fbc056e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b4eee8b85e844b55ae0882dbdfbdbc2') in 0.013848 seconds 
+  Import took 0.019397 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.453360 seconds.
+  path: Assets/Simple Buttons/Buttons Style 3 (Rounded Pink)/ButtonsStyle3_18.png
+  artifactKey: Guid(69127940d857e764e995eb115dc8f10a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Buttons/Buttons Style 3 (Rounded Pink)/ButtonsStyle3_18.png using Guid(69127940d857e764e995eb115dc8f10a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de2f5c6b7e8bc22d49f0b7be9d4707e4') in 0.030986 seconds 
+  Import took 0.039062 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000272 seconds.
+  path: Assets/Simple Buttons/Buttons Style 3 (Rounded Pink)/ButtonsStyle3_19.png
+  artifactKey: Guid(5f001d2e145145f4fad6bdeb9251d1ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Buttons/Buttons Style 3 (Rounded Pink)/ButtonsStyle3_19.png using Guid(5f001d2e145145f4fad6bdeb9251d1ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c0de078517508b2e5072208bc498b58') in 0.013929 seconds 
+  Import took 0.019284 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.149937 seconds.
+  path: Assets/Simple Buttons/Buttons Style 3 (Rounded Pink)/ButtonsStyle3_20.png
+  artifactKey: Guid(f37854832f89e90469ec2c558dbff79d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Buttons/Buttons Style 3 (Rounded Pink)/ButtonsStyle3_20.png using Guid(f37854832f89e90469ec2c558dbff79d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3759054f11932360f9446035c84255e') in 0.014285 seconds 
+  Import took 0.020433 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/Simple Buttons/Buttons Style 3 (Rounded Pink)/ButtonsStyle3_21.png
+  artifactKey: Guid(a730a75e325287748a0babfcac0941ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Buttons/Buttons Style 3 (Rounded Pink)/ButtonsStyle3_21.png using Guid(a730a75e325287748a0babfcac0941ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c99157b397c693c2d8090c563c3c93f') in 0.012117 seconds 
+  Import took 0.017721 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.448529 seconds.
+  path: Assets/Simple Buttons/Buttons Style 3 (Rounded Pink)/ButtonsStyle3_22.png
+  artifactKey: Guid(43b5e4becd8884047acee0e150d8dcd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Buttons/Buttons Style 3 (Rounded Pink)/ButtonsStyle3_22.png using Guid(43b5e4becd8884047acee0e150d8dcd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '959fe2af0bedae8b0d3f056afef9191e') in 0.021150 seconds 
+  Import took 0.030429 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000264 seconds.
+  path: Assets/Simple Buttons/Buttons Style 3 (Rounded Pink)/ButtonsStyle3_23.png
+  artifactKey: Guid(e98aeb65c3e46094ab4e863d5aa85ee7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Buttons/Buttons Style 3 (Rounded Pink)/ButtonsStyle3_23.png using Guid(e98aeb65c3e46094ab4e863d5aa85ee7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e19d782cf2d0b8d3f52ab9bb19c5efd3') in 0.015008 seconds 
+  Import took 0.021354 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.694836 seconds.
+  path: Assets/Simple Buttons/Buttons Style 3 (Rounded Pink)/ButtonsStyle3_24.png
+  artifactKey: Guid(759f7788ab2d45442a085ea6cf0a8d79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Buttons/Buttons Style 3 (Rounded Pink)/ButtonsStyle3_24.png using Guid(759f7788ab2d45442a085ea6cf0a8d79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd4ef5d2e8994f679bf8e778135e0934') in 0.019691 seconds 
+  Import took 0.028327 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000342 seconds.
+  path: Assets/Simple Buttons/Buttons Style 3 (Rounded Pink)/ButtonsStyle3_25.png
+  artifactKey: Guid(57b19169832f7e6409b11f1d5d5244fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Buttons/Buttons Style 3 (Rounded Pink)/ButtonsStyle3_25.png using Guid(57b19169832f7e6409b11f1d5d5244fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bffb3e7c09b2169ff75045ee80fb40c2') in 0.015251 seconds 
+  Import took 0.022300 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.550087 seconds.
+  path: Assets/Simple Buttons/Buttons Style 3 (Rounded Pink)/ButtonsStyle3_26.png
+  artifactKey: Guid(b4d6d0e23371ff84293c3dc01ddf9856) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Buttons/Buttons Style 3 (Rounded Pink)/ButtonsStyle3_26.png using Guid(b4d6d0e23371ff84293c3dc01ddf9856) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '753ee29d6f859cbfe001691f53acea4a') in 0.020363 seconds 
+  Import took 0.029489 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 218.325074 seconds.
+  path: Assets/Simple Buttons/Icons/undo.png
+  artifactKey: Guid(d9fba7a8ced5644dfa7eafde7e3105c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Buttons/Icons/undo.png using Guid(d9fba7a8ced5644dfa7eafde7e3105c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c6fc012de9644d858488a89bcdb11d7') in 0.198844 seconds 
+  Import took 0.301343 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 108.168643 seconds.
+  path: Assets/Simple Buttons/Icons/Icon_27.gif
+  artifactKey: Guid(eb1337c97821e4e2eb097dcf0f78a4fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple Buttons/Icons/Icon_27.gif using Guid(eb1337c97821e4e2eb097dcf0f78a4fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34f35c7d8078f4aa779b1fce872495b1') in 0.676256 seconds 
+  Import took 0.711981 seconds .
+
+========================================================================
+Received Prepare
+Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
+Refreshing native plugins compatible for Editor in 42.90 ms, found 6 plugins.
+Preloading 1 native plugins for Editor in 0.91 ms.
+Unloading 54 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 196.0 MB.
+System memory in use after: 195.9 MB.
+
+Unloading 54 unused Assets to reduce memory usage. Loaded Objects now: 3953.
+Total: 101.735583 ms (FindLiveObjects: 0.398375 ms CreateObjectMapping: 0.094083 ms MarkObjects: 100.512958 ms  DeleteObjects: 0.728792 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 

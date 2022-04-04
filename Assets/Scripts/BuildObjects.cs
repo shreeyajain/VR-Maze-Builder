@@ -42,6 +42,11 @@ public class BuildObjects : MonoBehaviour
     private bool pButtonPressInPrevFrame;
     private bool sButtonPressInPrevFrame;
 
+    private int mazeID;
+    private int fenceID;
+    private int startID;
+    private int endID;
+
     void GetDevice()
     {
         InputDevices.GetDevicesAtXRNode(xrNode, devices);
@@ -65,6 +70,11 @@ public class BuildObjects : MonoBehaviour
         fenceButton = false;
         pButtonPressInPrevFrame = false;
         sButtonPressInPrevFrame = false;
+
+        mazeID = 0;
+        fenceID = 0;
+        startID = 0;
+        endID = 0;
     }
 
     // Update is called once per frame
@@ -144,6 +154,8 @@ public class BuildObjects : MonoBehaviour
                     // Change the image of the button to BigPink
                     button.GetComponent<Image>().sprite = activeImage;
                 }
+
+                UndoRedo.AddObjToList("maze", build.name, "build", build.transform.position, build.transform.rotation);
             }
         }
 
@@ -198,6 +210,8 @@ public class BuildObjects : MonoBehaviour
                         button.GetComponent<Image>().sprite = activeImage;
                     }
                 }
+
+                UndoRedo.AddObjToList("start", build.name, "build", build.transform.position, build.transform.rotation);
             }
         }
 
@@ -257,6 +271,8 @@ public class BuildObjects : MonoBehaviour
                         button.GetComponent<Image>().sprite = activeImage;
                     }
                 }
+
+                UndoRedo.AddObjToList("end", build.name, "build", build.transform.position, build.transform.rotation);
             }
         }
 
@@ -308,6 +324,8 @@ public class BuildObjects : MonoBehaviour
                     // Change the image of the button to BigPink
                     button.GetComponent<Image>().sprite = activeImage;
                 }
+
+                UndoRedo.AddObjToList("fence", build.name, "build", build.transform.position, build.transform.rotation);
             }
         }
     }
@@ -328,6 +346,9 @@ public class BuildObjects : MonoBehaviour
             // Change the image of the button to BigGrey
             button.GetComponent<Image>().sprite = inactiveImage;
         }
+
+        mazeID += 1;
+        build.name = "maze_" + mazeID.ToString();
     }
 
     public void OnStartButtonPress()
@@ -345,6 +366,9 @@ public class BuildObjects : MonoBehaviour
             // Change the image of the button to BigGrey
             button.GetComponent<Image>().sprite = inactiveImage;
         }
+
+        startID += 1;
+        build.name = "start_" + startID.ToString();
     }
 
     public void OnEndButtonPress()
@@ -362,6 +386,9 @@ public class BuildObjects : MonoBehaviour
             // Change the image of the button to BigGrey
             button.GetComponent<Image>().sprite = inactiveImage;
         }
+
+        endID += 1;
+        build.name = "end_" + endID.ToString();
     }
 
     public void OnFenceButtonPress()
@@ -379,5 +406,8 @@ public class BuildObjects : MonoBehaviour
             // Change the image of the button to BigGrey
             button.GetComponent<Image>().sprite = inactiveImage;
         }
+
+        fenceID += 1;
+        build.name = "fence_" + fenceID.ToString();
     }
 }
