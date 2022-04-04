@@ -8,6 +8,7 @@ using UnityEngine.XR;
 
 public class BuildObjects : MonoBehaviour
 {
+    public Transform workspace;
     public UnityEngine.Object mazePrefab;
     public UnityEngine.Object startPrefab;
     public UnityEngine.Object endPrefab;
@@ -337,6 +338,7 @@ public class BuildObjects : MonoBehaviour
         target = new Vector3((float)Math.Floor(cameraTransform.position.x) + 0.5f, targetY,
                                 (float)Math.Ceiling(cameraTransform.position.z) + 3.5f);
         build = (GameObject) Instantiate(mazePrefab, target, Quaternion.identity);
+        build.transform.parent = workspace;
         build.GetComponent<Collider>().isTrigger = true;
         for (int j = 0; j < gameObject.transform.childCount; j++)
         {
@@ -357,6 +359,7 @@ public class BuildObjects : MonoBehaviour
         target = new Vector3((float)Math.Floor(cameraTransform.position.x), 1.0f,
                                 (float)Math.Ceiling(cameraTransform.position.z) + 3.5f);
         build = (GameObject) Instantiate(startPrefab, target, Quaternion.identity);
+        build.transform.parent = workspace;
         build.GetComponent<Collider>().isTrigger = true;
         for (int j = 0; j < gameObject.transform.childCount; j++)
         {
@@ -377,6 +380,7 @@ public class BuildObjects : MonoBehaviour
         target = new Vector3((float)Math.Floor(cameraTransform.position.x), 1.0f,
                                     (float)Math.Ceiling(cameraTransform.position.z) + 4f);
         build = (GameObject) Instantiate(endPrefab, target, Quaternion.identity);
+        build.transform.parent = workspace;
         build.GetComponent<Collider>().isTrigger = true;
         for (int j = 0; j < gameObject.transform.childCount; j++)
         {
@@ -397,6 +401,7 @@ public class BuildObjects : MonoBehaviour
         target = new Vector3((float)Math.Floor(cameraTransform.position.x), 0.75f,
                                 (float)Math.Ceiling(cameraTransform.position.z) + 3.5f);
         build = (GameObject) Instantiate(fencePrefab, target, Quaternion.identity);
+        build.transform.parent = workspace;
         build.GetComponent<Collider>().isTrigger = true;
         for (int j = 0; j < gameObject.transform.childCount; j++)
         {

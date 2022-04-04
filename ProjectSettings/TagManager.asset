@@ -11,6 +11,9 @@ TagManager:
   - fence
   - start
   - end
+  - floor
+  - Ignore Collision Fade
+  - Canvas
   layers:
   - Default
   - TransparentFX

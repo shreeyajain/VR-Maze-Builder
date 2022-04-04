@@ -41,6 +41,7 @@ public class SelectFence : MonoBehaviour
 
     private Button undo;
     private Button redo;
+    private Slider scale;
 
     void GetDevice()
     {
@@ -72,6 +73,7 @@ public class SelectFence : MonoBehaviour
         save = canvas.transform.GetChild(3).gameObject;
         undo = canvas.transform.GetChild(4).GetComponent<Button>();
         redo = canvas.transform.GetChild(5).GetComponent<Button>();
+        scale = canvas.transform.GetChild(6).GetComponent<Slider>();
     }
 
     // Update is called once per frame
@@ -185,6 +187,7 @@ public class SelectFence : MonoBehaviour
 
         undo.gameObject.SetActive(false);
         redo.gameObject.SetActive(false);
+        scale.gameObject.SetActive(false);
 
         Button Xplus = selecting.transform.GetChild(0).GetComponent<Button>();
 		Xplus.onClick.AddListener(() => RotatePlusX());
@@ -246,6 +249,7 @@ public class SelectFence : MonoBehaviour
 
         undo.gameObject.SetActive(true);
         redo.gameObject.SetActive(true);
+        scale.gameObject.SetActive(true);
     }
 
     public void RotatePlusX()
