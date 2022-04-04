@@ -39,6 +39,9 @@ public class SelectFence : MonoBehaviour
     private Vector3 initPos;
     private Quaternion initRot;
 
+    private Button undo;
+    private Button redo;
+
     void GetDevice()
     {
         InputDevices.GetDevicesAtXRNode(xrNode, devices);
@@ -67,6 +70,8 @@ public class SelectFence : MonoBehaviour
         building = canvas.transform.GetChild(1).gameObject;
         selecting = canvas.transform.GetChild(2).gameObject;
         save = canvas.transform.GetChild(3).gameObject;
+        undo = canvas.transform.GetChild(4).GetComponent<Button>();
+        redo = canvas.transform.GetChild(5).GetComponent<Button>();
     }
 
     // Update is called once per frame
@@ -178,6 +183,9 @@ public class SelectFence : MonoBehaviour
             building.SetActive(false);
         }
 
+        undo.gameObject.SetActive(false);
+        redo.gameObject.SetActive(false);
+
         Button Xplus = selecting.transform.GetChild(0).GetComponent<Button>();
 		Xplus.onClick.AddListener(() => RotatePlusX());
         Button Xneg = selecting.transform.GetChild(1).GetComponent<Button>();
@@ -235,6 +243,9 @@ public class SelectFence : MonoBehaviour
             wasBuildingActive = false;
             building.SetActive(true);
         }
+
+        undo.gameObject.SetActive(true);
+        redo.gameObject.SetActive(true);
     }
 
     public void RotatePlusX()
