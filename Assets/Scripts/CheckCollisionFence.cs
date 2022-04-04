@@ -23,19 +23,25 @@ public class CheckCollisionFence : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        anyCollision = true;
-        for (int j = 0; j < gameObject.transform.childCount; j++)
+        if (!other.CompareTag("Hand"))
         {
-            gameObject.transform.GetChild(j).GetComponent<Renderer>().material = redMat;
+            anyCollision = true;
+            for (int j = 0; j < gameObject.transform.childCount; j++)
+            {
+                gameObject.transform.GetChild(j).GetComponent<Renderer>().material = redMat;
+            }
         }
     }
 
     void OnTriggerExit(Collider other)
     {
-        anyCollision = false;
-        for (int j = 0; j < gameObject.transform.childCount; j++)
+        if (!other.CompareTag("Hand"))
         {
-            gameObject.transform.GetChild(j).GetComponent<Renderer>().material = fenceMat;
+            anyCollision = false;
+            for (int j = 0; j < gameObject.transform.childCount; j++)
+            {
+                gameObject.transform.GetChild(j).GetComponent<Renderer>().material = fenceMat;
+            }
         }
     }
 }

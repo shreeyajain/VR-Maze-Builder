@@ -22,13 +22,19 @@ public class CheckCollisionMaze : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        anyCollision = true;
-        gameObject.GetComponent<Renderer>().material = redMat;
+        if (!other.CompareTag("Hand"))
+        {
+            anyCollision = true;
+            gameObject.GetComponent<Renderer>().material = redMat;
+        }
     }
 
     void OnTriggerExit(Collider other)
     {
-        anyCollision = false;
-        gameObject.GetComponent<Renderer>().material = mazeMat;
+        if (!other.CompareTag("Hand"))
+        {
+            anyCollision = false;
+            gameObject.GetComponent<Renderer>().material = mazeMat;
+        }
     }
 }
