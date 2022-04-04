@@ -545,6 +545,10 @@ MonoBehaviour:
   end: {fileID: 831791434}
   inactiveImage: {fileID: 21300000, guid: 72c72df40bd317b44ab2c02d03f268c7, type: 3}
   activeImage: {fileID: 21300000, guid: 5f4b5e4d7ee5eb14e97739815339826f, type: 3}
+  mazePrefab: {fileID: 883788786337002225, guid: 3192e219b51ae45a690add02ddf2a8e3, type: 3}
+  startPrefab: {fileID: 7049760561854632086, guid: 423d19a3bf8f34d4392feafb75dc86c1, type: 3}
+  endPrefab: {fileID: 7932838694254473892, guid: 09ab6637896e643f6b8a73a2ca33bcf6, type: 3}
+  fencePrefab: {fileID: 6848683615256044919, guid: 3b4e67ec87b93214b87349417e4fd4db, type: 3}
 --- !u!4 &95764788
 Transform:
   m_ObjectHideFlags: 0

@@ -36,6 +36,10 @@ public class SelectEnd : MonoBehaviour
     private Vector3 prevRot;
     private bool canMove;
     private bool rotate;
+    
+    private bool deleted;
+    private Vector3 initPos;
+    private Quaternion initRot;
 
     void GetDevice()
     {
@@ -58,6 +62,7 @@ public class SelectEnd : MonoBehaviour
         wasBuildingActive = false;
         canMove = true;
         rotate = false;
+        deleted = false;
 
         canvas = GameObject.Find("Canvas");
         build = canvas.transform.GetChild(0).gameObject;
@@ -151,11 +156,15 @@ public class SelectEnd : MonoBehaviour
     public void Select()
     {
         select = true;
+        deleted = false;
         for (int j = 0; j < gameObject.transform.childCount; j++)
         {
             gameObject.transform.GetChild(j).GetComponent<Renderer>().material = greenMat;
         }
         gameObject.GetComponent<Collider>().isTrigger = true;
+
+        initPos = gameObject.transform.position;
+        initRot = gameObject.transform.rotation;
 
         selecting.SetActive(true);
         if (build.activeSelf)
@@ -199,6 +208,11 @@ public class SelectEnd : MonoBehaviour
             gameObject.transform.GetChild(j).GetComponent<Renderer>().material = endMat3;
         }
         gameObject.GetComponent<Collider>().isTrigger = false;
+
+        if (!deleted)
+        {
+            UndoRedo.AddObjToList("end", gameObject.name, "manipulate", initPos, initRot);
+        }
 
         Button Xplus = selecting.transform.GetChild(0).GetComponent<Button>();
 		Xplus.onClick.RemoveListener(() => RotatePlusX());
@@ -279,6 +293,8 @@ public class SelectEnd : MonoBehaviour
 
     public void DeleteObj()
     {
+        deleted = true;
+        UndoRedo.AddObjToList("end", gameObject.name, "delete", gameObject.transform.position, gameObject.transform.rotation);
         Destroy(gameObject);
         Button button = building.transform.GetChild(2).GetComponent<Button>();
         // Toggle interactable state of the button on and off

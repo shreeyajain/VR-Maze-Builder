@@ -12,6 +12,11 @@ public class UndoRedo : MonoBehaviour
     public Sprite inactiveImage;
     public Sprite activeImage;
 
+    public UnityEngine.Object mazePrefab;
+    public UnityEngine.Object startPrefab;
+    public UnityEngine.Object endPrefab;
+    public UnityEngine.Object fencePrefab;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,21 +51,53 @@ public class UndoRedo : MonoBehaviour
             if (obj.funcType == "build")
             {
                 Destroy(GameObject.Find(obj.name));
+                if (obj.objType == "start")
+                {
+                    // Toggle interactable state of the button on and off
+                    start.interactable = !start.interactable;
+                    // Change the image of the button to BigPink
+                    start.GetComponent<Image>().sprite = activeImage;
+                }
+                else if (obj.objType == "end")
+                {
+                    // Toggle interactable state of the button on and off
+                    end.interactable = !end.interactable;
+                    // Change the image of the button to BigPink
+                    end.GetComponent<Image>().sprite = activeImage;
+                }
             }
-
-            if (obj.objType == "start")
+            else if (obj.funcType == "delete")
             {
-                // Toggle interactable state of the button on and off
-                start.interactable = !start.interactable;
-                // Change the image of the button to BigPink
-                start.GetComponent<Image>().sprite = activeImage;
+                if (obj.objType == "start")
+                {
+                    Instantiate(startPrefab, obj.pos, obj.rot);
+                    // Toggle interactable state of the button on and off
+                    start.interactable = !start.interactable;
+                    // Change the image of the button to BigPink
+                    start.GetComponent<Image>().sprite = inactiveImage;
+                }
+                else if (obj.objType == "end")
+                {
+                    Instantiate(endPrefab, obj.pos, obj.rot);
+                    // Toggle interactable state of the button on and off
+                    end.interactable = !end.interactable;
+                    // Change the image of the button to BigPink
+                    end.GetComponent<Image>().sprite = inactiveImage;
+                }
+                else if (obj.objType == "maze")
+                {
+                    Instantiate(mazePrefab, obj.pos, obj.rot);
+                }
+                else if (obj.objType == "fence")
+                {
+                    Instantiate(fencePrefab, obj.pos, obj.rot);
+                }
             }
-            else if (obj.objType == "end")
+            else if (obj.funcType == "manipulate")
             {
-                // Toggle interactable state of the button on and off
-                end.interactable = !end.interactable;
-                // Change the image of the button to BigPink
-                end.GetComponent<Image>().sprite = activeImage;
+                GameObject manipulatedObj = GameObject.Find(obj.name);
+                manipulatedObj.transform.position = obj.pos;
+                manipulatedObj.transform.rotation = obj.rot;
             }
         }
     }

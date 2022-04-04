@@ -34,6 +34,10 @@ public class SelectFence : MonoBehaviour
     private Vector3 posToAdd;
     private bool canMove;
     private bool rotate;
+    
+    private bool deleted;
+    private Vector3 initPos;
+    private Quaternion initRot;
 
     void GetDevice()
     {
@@ -56,6 +60,7 @@ public class SelectFence : MonoBehaviour
         wasBuildingActive = false;
         canMove = true;
         rotate = false;
+        deleted = false;
 
         canvas = GameObject.Find("Canvas");
         build = canvas.transform.GetChild(0).gameObject;
@@ -150,12 +155,16 @@ public class SelectFence : MonoBehaviour
     public void Select()
     {
         select = true;
+        deleted = false;
         for (int j = 0; j < gameObject.transform.childCount; j++)
         {
             gameObject.transform.GetChild(j).GetComponent<Renderer>().material = greenMat;
         }
         gameObject.GetComponent<Collider>().isTrigger = true;
 
+        initPos = gameObject.transform.position;
+        initRot = gameObject.transform.rotation;
+        
         selecting.SetActive(true);
         if (build.activeSelf)
         {
@@ -193,6 +202,11 @@ public class SelectFence : MonoBehaviour
             gameObject.transform.GetChild(j).GetComponent<Renderer>().material = fenceMat;
         }
         gameObject.GetComponent<Collider>().isTrigger = false;
+
+        if (!deleted)
+        {
+            UndoRedo.AddObjToList("fence", gameObject.name, "manipulate", initPos, initRot);
+        }
 
         Button Xplus = selecting.transform.GetChild(0).GetComponent<Button>();
 		Xplus.onClick.RemoveListener(() => RotatePlusX());
@@ -289,6 +303,8 @@ public class SelectFence : MonoBehaviour
 
     public void DeleteObj()
     {
+        deleted = true;
+        UndoRedo.AddObjToList("fence", gameObject.name, "delete", gameObject.transform.position, gameObject.transform.rotation);
         Destroy(gameObject);
     }
 }
